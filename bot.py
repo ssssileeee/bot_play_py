@@ -173,6 +173,8 @@ def print_hangman(message):
     ]
     bot.send_message(message.chat.id, text=data['hangman_pic'][data['attempts']], reply_markup=get_keyboard())
 
+
+
 @bot.message_handler(func=lambda message: message.text == TIC_TAC_TOE_GAME)
 def tic_tac_toe_game(message):
     data['board'] = get_default_board()
